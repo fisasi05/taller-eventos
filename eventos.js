@@ -1,6 +1,13 @@
-function mostrarAlertaDiv() {
-    alert("¡Hola! Soy el div");
-}
-
-const botonDiv = document.getElementById("botonDiv");
-botonDiv.addEventListener("click", mostrarAlertaDiv);
+document.addEventListener('DOMContentLoaded', function () {
+    const botonSaludar = document.getElementById('saludarBoton');
+  
+    botonSaludar.addEventListener('click', function (event) {
+      event.stopPropagation();
+      mostrarAlerta();
+    });
+  
+    function mostrarAlerta() {
+      alert('¡Hola!');
+    }
+  });
+  
